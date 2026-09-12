@@ -8,4 +8,12 @@ tabs.forEach(tab => tab.addEventListener('click', () => {
   panel.hidden = false;
   panel.classList.add('active');
 }));
+
+document.querySelectorAll('a[href="resume.html"]').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    window.open('resume.html', '_blank', 'noopener,noreferrer');
+  });
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
